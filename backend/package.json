@@ -1,0 +1,35 @@
+{
+  "name": "event-booking-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Event Booking System - SkillOrbit Capstone Project",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node --use-system-ca src/server.js",
+    "dev": "nodemon --exec \"node --use-system-ca\" src/server.js",
+    "seed": "node --use-system-ca src/utils/seedData.js",
+    "test": "node --use-system-ca tests/e2e.test.js"
+  },
+  "keywords": [
+    "event-booking",
+    "express",
+    "mongodb",
+    "jwt",
+    "capstone"
+  ],
+  "author": "SkillOrbit Capstone Student",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "json2csv": "^6.0.0-alpha.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
