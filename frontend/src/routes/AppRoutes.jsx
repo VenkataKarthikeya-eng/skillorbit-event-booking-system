@@ -10,6 +10,8 @@ import Events from '../pages/public/Events';
 import EventDetails from '../pages/public/EventDetails';
 import Login from '../pages/public/Login';
 import Register from '../pages/public/Register';
+import PrivacyPolicy from '../pages/public/PrivacyPolicy';
+import TermsAndConditions from '../pages/public/TermsAndConditions';
 import NotFound from '../pages/public/NotFound';
 
 // User Pages
@@ -25,14 +27,14 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<EventDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsAndConditions />} />
 
-        {/* Protected User Routes */}
         <Route
           path="/dashboard"
           element={
@@ -50,7 +52,6 @@ const AppRoutes = () => {
           }
         />
 
-        {/* Protected Admin Routes */}
         <Route
           path="/admin/dashboard"
           element={
@@ -84,7 +85,6 @@ const AppRoutes = () => {
           }
         />
 
-        {/* 404 Route */}
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
