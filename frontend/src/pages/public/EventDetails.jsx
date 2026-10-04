@@ -166,11 +166,11 @@ const EventDetails = () => {
             />
 
             <div className="absolute top-4 left-4 flex gap-2">
-              <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-white/95 text-indigo-700 backdrop-blur shadow-sm">
+              <span className="px-3 py-1.5 rounded-md text-xs font-bold bg-white/95 text-indigo-700 backdrop-blur shadow-sm">
                 {event.category}
               </span>
               {event.status === 'cancelled' && (
-                <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-red-600 text-white shadow-sm">
+                <span className="px-3 py-1.5 rounded-md text-xs font-bold bg-red-600 text-white shadow-sm">
                   Cancelled
                 </span>
               )}
@@ -191,7 +191,7 @@ const EventDetails = () => {
             {/* Quick Details Chips */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-4 border-y border-slate-100 text-xs text-slate-700">
               <div className="flex items-start space-x-3">
-                <div className="p-2.5 bg-indigo-50 text-indigo-600 rounded-xl">
+                <div className="p-2.5 bg-indigo-50 text-indigo-600 rounded-lg">
                   <Calendar className="w-5 h-5" />
                 </div>
                 <div>
@@ -202,7 +202,7 @@ const EventDetails = () => {
               </div>
 
               <div className="flex items-start space-x-3">
-                <div className="p-2.5 bg-indigo-50 text-indigo-600 rounded-xl">
+                <div className="p-2.5 bg-indigo-50 text-indigo-600 rounded-lg">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
@@ -253,7 +253,7 @@ const EventDetails = () => {
                 </span>
               </div>
 
-              <div className="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+              <div className="w-full bg-slate-100 rounded-sm h-2.5 overflow-hidden">
                 <div
                   className={`h-full transition-all duration-500 ${
                     isSoldOut
@@ -269,7 +269,7 @@ const EventDetails = () => {
               <p className="text-[11px] text-slate-400">
                 {isSoldOut
                   ? 'All tickets have been reserved for this session.'
-                  : `${bookedPercent}% booked — reserve early to guarantee attendance.`}
+                  : `${bookedPercent}% booked: reserve early to guarantee attendance.`}
               </p>
             </div>
 
@@ -278,21 +278,21 @@ const EventDetails = () => {
               {isPast ? (
                 <button
                   disabled
-                  className="w-full py-3.5 px-4 rounded-xl bg-slate-200 text-slate-500 font-semibold text-sm cursor-not-allowed text-center"
+                  className="w-full py-3.5 px-4 rounded-lg bg-slate-200 text-slate-500 font-semibold text-sm cursor-not-allowed text-center"
                 >
                   Event Concluded
                 </button>
               ) : isSoldOut ? (
                 <button
                   disabled
-                  className="w-full py-3.5 px-4 rounded-xl bg-amber-100 text-amber-700 font-semibold text-sm cursor-not-allowed text-center border border-amber-200"
+                  className="w-full py-3.5 px-4 rounded-lg bg-amber-100 text-amber-700 font-semibold text-sm cursor-not-allowed text-center border border-amber-200"
                 >
                   Sold Out
                 </button>
               ) : event.status === 'cancelled' ? (
                 <button
                   disabled
-                  className="w-full py-3.5 px-4 rounded-xl bg-red-100 text-red-700 font-semibold text-sm cursor-not-allowed text-center border border-red-200"
+                  className="w-full py-3.5 px-4 rounded-lg bg-red-100 text-red-700 font-semibold text-sm cursor-not-allowed text-center border border-red-200"
                 >
                   Event Cancelled
                 </button>
@@ -305,7 +305,7 @@ const EventDetails = () => {
                       setIsBookingOpen(true);
                     }
                   }}
-                  className="w-full py-3.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md shadow-indigo-200 hover:shadow-indigo-300 transition-all flex items-center justify-center space-x-2"
+                  className="w-full py-3.5 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-sm transition-all flex items-center justify-center space-x-2"
                 >
                   <Ticket className="w-4 h-4" />
                   <span>{isAuthenticated ? 'Book Tickets' : 'Sign In to Book Tickets'}</span>

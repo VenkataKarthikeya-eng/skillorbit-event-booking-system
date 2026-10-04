@@ -1,5 +1,5 @@
 # Presentation Slides Outline & Script (18-Slide Master Deck)
-**SkillOrbit Web Development Capstone Project — Event Booking System**
+**SkillOrbit Web Development Capstone Project :  Event Booking System**
 
 ---
 
@@ -14,7 +14,7 @@
   - Evaluation Date: October 2026
 - **Recommended Visual:** Clean university/SkillOrbit branded title card with clean modern typography, displaying the application logo and a screenshot of the home hero interface.
 - **Speaker Notes:**
-  > "Good morning, respected evaluators and peers. Today, I am proud to present the SkillOrbit Event Booking and Management System—a full-stack web application designed to solve the critical challenges of campus and corporate event registration. Over the next fifteen minutes, I will walk you through the architectural engineering, concurrency safeguards, analytics engine, and exhaustive verification that make this platform production-ready."
+  > "Good morning, respected evaluators and peers. Today, I am proud to present the SkillOrbit Event Booking and Management System: a full-stack web application designed to solve the critical challenges of campus and corporate event registration. Over the next fifteen minutes, I will walk you through the architectural engineering, concurrency safeguards, analytics engine, and exhaustive verification that make this platform production-ready."
 
 ---
 
@@ -107,7 +107,7 @@
     - Full-text search index on `{ title: 'text', description: 'text', venue: 'text' }`.
 - **Recommended Visual:** An Entity-Relationship Diagram (ERD) showing the `1-to-many` relationships between Users, Events, and Bookings.
 - **Speaker Notes:**
-  > "Our database schema is a hybrid document-relational design. We normalize core entities like Users and Events, while storing snapshot copies of ticket prices on the Booking record to preserve audit history. We also implemented targeted indexes—including compound and text search indexes—ensuring sub-100 millisecond response times."
+  > "Our database schema is a hybrid document-relational design. We normalize core entities like Users and Events, while storing snapshot copies of ticket prices on the Booking record to preserve audit history. We also implemented targeted indexes: including compound and text search indexes: ensuring sub-100 millisecond response times."
 
 ---
 
@@ -135,7 +135,7 @@
   - **Digital Ticket Pass:** Modal display showing attendee name, booking code, event venue, and printable view.
 - **Recommended Visual:** Step-by-step workflow infographic: Browse Catalog ➔ Click Event Details ➔ Select Seats (1-10) ➔ Atomic Reservation ➔ Digital Boarding Pass Display.
 - **Speaker Notes:**
-  > "Here is the discovery and booking workflow. A user browses the catalog, filters by their preferred category, and selects an event. In the booking modal, they select their ticket quantity—up to a maximum of 10 seats. Upon submission, the backend executes our atomic reservation logic and immediately returns a digital ticket pass complete with a reference code."
+  > "Here is the discovery and booking workflow. A user browses the catalog, filters by their preferred category, and selects an event. In the booking modal, they select their ticket quantity: up to a maximum of 10 seats. Upon submission, the backend executes our atomic reservation logic and immediately returns a digital ticket pass complete with a reference code."
 
 ---
 
@@ -185,8 +185,8 @@
 - **Key Points:**
   - **The Need:** Organizers require physical check-in rosters and capacity utilization audits.
   - **Endpoints:**
-    - `/api/reports/bookings/csv` — Comprehensive attendee roster with reference codes and ticket counts.
-    - `/api/reports/events/csv` — Capacity utilization and percentage occupancy report.
+    - `/api/reports/bookings/csv` :  Comprehensive attendee roster with reference codes and ticket counts.
+    - `/api/reports/events/csv` :  Capacity utilization and percentage occupancy report.
   - **Compliance & Security:** RFC 4180 standard formatting; strictly protected by admin role authorization.
 - **Recommended Visual:** Screenshot of the CSV export buttons in the Admin Dashboard alongside a preview of the generated Excel/CSV spreadsheet.
 - **Speaker Notes:**

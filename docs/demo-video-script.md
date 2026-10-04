@@ -1,5 +1,5 @@
 # Capstone Project Video Demonstration Script
-**SkillOrbit Web Development Capstone Project — Event Booking System**
+**SkillOrbit Web Development Capstone Project :  Event Booking System**
 **Target Duration:** ~8 to 9 minutes  
 **Format:** Screen Recording + Voiceover Narration  
 
@@ -26,9 +26,9 @@
   - Browser displays the SkillOrbit Home Page (`http://localhost:5173`).
   - Smoothly scroll down through the Hero Banner, features highlights, and upcoming event cards.
 - **Narrator Voiceover:**
-  > "Hello everyone, and welcome to the project demonstration of the **SkillOrbit Event Booking and Management System**—our full-stack web development capstone project.
+  > "Hello everyone, and welcome to the project demonstration of the **SkillOrbit Event Booking and Management System**: our full-stack web development capstone project.
   > 
-  > SkillOrbit is a modern, enterprise-grade web application engineered on the MERN stack—MongoDB Atlas, Express, React 19, and Node.js. It solves critical challenges in campus and corporate event registration: eliminating seat overselling through concurrency-safe atomic operations, providing digital ticket passes, and giving organizers real-time visual analytics and CSV reports. Let's dive in!"
+  > SkillOrbit is a modern, enterprise-grade web application engineered on the MERN stack: MongoDB Atlas, Express, React 19, and Node.js. It solves critical challenges in campus and corporate event registration: eliminating seat overselling through concurrency-safe atomic operations, providing digital ticket passes, and giving organizers real-time visual analytics and CSV reports. Let's dive in!"
 
 ---
 
@@ -60,7 +60,7 @@
 - **Narrator Voiceover:**
   > "Now, let's explore the Event Discovery catalog. 
   > 
-  > Attendees can browse all published events. The catalog provides an intuitive category filter bar—allowing users to filter by Workshops, Conferences, Concerts, or College Fests with zero page reloads.
+  > Attendees can browse all published events. The catalog provides an intuitive category filter bar: allowing users to filter by Workshops, Conferences, Concerts, or College Fests with zero page reloads.
   > 
   > We can also perform instant keyword search. As I type 'Cloud', the interface dynamically filters matching titles, descriptions, and venues. Notice each event card displays essential details: date, time, venue, ticket price, and a real-time badge indicating available seats."
 
@@ -93,7 +93,7 @@
   > 
   > I can select ticket quantities between 1 and 10 seats. As I adjust the counter, the total amount recalculates in real time. 
   > 
-  > When I click 'Confirm Booking', our backend executes an atomic `findOneAndUpdate` with a `$gte` guard condition on MongoDB Atlas. This guarantees that seats are decremented only if enough inventory exists at that exact millisecond. If multiple users book the last available seats simultaneously, race conditions are completely prevented—zero overselling is guaranteed."
+  > When I click 'Confirm Booking', our backend executes an atomic `findOneAndUpdate` with a `$gte` guard condition on MongoDB Atlas. This guarantees that seats are decremented only if enough inventory exists at that exact millisecond. If multiple users book the last available seats simultaneously, race conditions are completely prevented: zero overselling is guaranteed."
 
 ---
 

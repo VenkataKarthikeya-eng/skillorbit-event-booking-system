@@ -1,4 +1,4 @@
-# SkillOrbit Web Development Capstone Project — Final Submission Checklist
+# SkillOrbit Web Development Capstone Project :  Final Submission Checklist
 
 ---
 

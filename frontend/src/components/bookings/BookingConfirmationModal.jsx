@@ -59,7 +59,7 @@ const BookingConfirmationModal = ({ booking, onClose }) => {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors print:hidden"
+          className="absolute top-5 right-5 p-2 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors print:hidden"
           title="Close"
         >
           <X className="w-5 h-5" />
@@ -79,14 +79,14 @@ const BookingConfirmationModal = ({ booking, onClose }) => {
         </div>
 
         {/* Printable Ticket Pass Body */}
-        <div className="border border-slate-200 rounded-2xl bg-gradient-to-b from-indigo-50/30 to-white overflow-hidden shadow-sm relative print:border-slate-800">
+        <div className="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm relative print:border-slate-800">
           {/* Top Ticket Header */}
           <div className="p-5 border-b border-dashed border-slate-200 space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-100">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-md border border-indigo-100">
                 Official Event Pass
               </span>
-              <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">
+              <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100">
                 Confirmed
               </span>
             </div>
@@ -96,7 +96,7 @@ const BookingConfirmationModal = ({ booking, onClose }) => {
             </h3>
 
             {/* Reference Copy Box */}
-            <div className="flex items-center justify-between bg-white p-2.5 rounded-xl border border-slate-200 text-xs">
+            <div className="flex items-center justify-between bg-white p-2.5 rounded-lg border border-slate-200 text-xs">
               <span className="text-slate-500 font-medium">Booking Reference:</span>
               <div className="flex items-center space-x-1.5">
                 <span className="font-mono font-bold text-slate-900 tracking-wider">
@@ -166,7 +166,7 @@ const BookingConfirmationModal = ({ booking, onClose }) => {
           <button
             type="button"
             onClick={handlePrint}
-            className="flex-1 py-3 px-4 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs flex items-center justify-center space-x-2 transition-colors"
+            className="flex-1 py-3 px-4 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs flex items-center justify-center space-x-2 transition-colors"
           >
             <Printer className="w-4 h-4" />
             <span>Print Ticket Pass</span>
@@ -175,7 +175,7 @@ const BookingConfirmationModal = ({ booking, onClose }) => {
           <Link
             to="/my-bookings"
             onClick={onClose}
-            className="flex-1 py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs flex items-center justify-center space-x-2 shadow-sm transition-all"
+            className="flex-1 py-3 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs flex items-center justify-center space-x-2 shadow-sm transition-all"
           >
             <span>View My Bookings</span>
             <ArrowRight className="w-4 h-4" />

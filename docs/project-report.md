@@ -65,9 +65,9 @@ The primary engineering objectives of the SkillOrbit Event Booking System are:
 - Centralized toast notification system and comprehensive error handling.
 
 ### Out-of-Scope (Deliberate Design Boundaries)
-- Live payment gateway integration (Stripe/Razorpay) — ticket prices are simulated for educational tracking.
-- Physical hardware barcode scanners for turnstiles — digital pass reference codes are provided for manual/visual verification.
-- Third-party social OAuth login (Google/GitHub) — prioritized self-contained, enterprise credential management.
+- Live payment gateway integration (Stripe/Razorpay) :  ticket prices are simulated for educational tracking.
+- Physical hardware barcode scanners for turnstiles :  digital pass reference codes are provided for manual/visual verification.
+- Third-party social OAuth login (Google/GitHub) :  prioritized self-contained, enterprise credential management.
 
 ---
 

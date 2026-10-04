@@ -85,7 +85,7 @@ const Events = () => {
           </div>
           <button
             onClick={fetchEvents}
-            className="inline-flex items-center space-x-1.5 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-medium rounded-xl transition-colors shadow-sm"
+            className="inline-flex items-center space-x-1.5 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-medium rounded-lg transition-colors shadow-sm"
           >
             <RefreshCw className="w-3.5 h-3.5" />
             <span>Retry</span>
@@ -106,7 +106,7 @@ const Events = () => {
                 <div className="h-5 bg-slate-200 rounded w-3/4"></div>
                 <div className="h-3 bg-slate-200 rounded w-full"></div>
                 <div className="h-3 bg-slate-200 rounded w-2/3"></div>
-                <div className="h-8 bg-slate-200 rounded-xl mt-4"></div>
+                <div className="h-8 bg-slate-200 rounded-lg mt-4"></div>
               </div>
             </div>
           ))}
@@ -128,7 +128,7 @@ const Events = () => {
           {(search || category !== 'All') && (
             <button
               onClick={handleReset}
-              className="mt-5 inline-flex items-center space-x-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-medium rounded-xl transition-all shadow-sm"
+              className="mt-5 inline-flex items-center space-x-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-medium rounded-lg transition-all shadow-sm"
             >
               <span>Clear All Filters</span>
             </button>

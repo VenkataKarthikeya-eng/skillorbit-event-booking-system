@@ -136,7 +136,7 @@ const Register = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Alex Johnson"
-                className={`w-full pl-10 pr-4 py-2.5 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                className={`w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
                   errors.name
                     ? 'border-red-300 focus:border-red-500 focus:ring-red-200 bg-red-50/20'
                     : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -161,7 +161,7 @@ const Register = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="alex@example.com"
-                className={`w-full pl-10 pr-4 py-2.5 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                className={`w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
                   errors.email
                     ? 'border-red-300 focus:border-red-500 focus:ring-red-200 bg-red-50/20'
                     : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -186,7 +186,7 @@ const Register = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="+91 98765 43210"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 text-sm text-slate-900 placeholder:text-slate-400 transition-all"
+                className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-slate-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 text-sm text-slate-900 placeholder:text-slate-400 transition-all"
               />
             </div>
           </div>
@@ -206,7 +206,7 @@ const Register = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="At least 6 characters"
-                className={`w-full pl-10 pr-10 py-2.5 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                className={`w-full pl-10 pr-10 py-2.5 rounded-lg border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
                   errors.password
                     ? 'border-red-300 focus:border-red-500 focus:ring-red-200 bg-red-50/20'
                     : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -227,23 +227,23 @@ const Register = () => {
               <div className="mt-2 space-y-1">
                 <div className="flex gap-1 h-1.5">
                   <div
-                    className={`flex-1 rounded-full ${
+                    className={`flex-1 rounded-sm ${
                       strength >= 1 ? 'bg-amber-400' : 'bg-slate-200'
                     }`}
                   ></div>
                   <div
-                    className={`flex-1 rounded-full ${
+                    className={`flex-1 rounded-sm ${
                       strength >= 2 ? 'bg-emerald-400' : 'bg-slate-200'
                     }`}
                   ></div>
                   <div
-                    className={`flex-1 rounded-full ${
+                    className={`flex-1 rounded-sm ${
                       strength >= 3 ? 'bg-indigo-600' : 'bg-slate-200'
                     }`}
                   ></div>
                 </div>
                 <p className="text-[10px] text-slate-500">
-                  {strength === 1 && 'Fair — add numbers or symbols'}
+                  {strength === 1 && 'Fair: include numbers and symbols'}
                   {strength === 2 && 'Good password'}
                   {strength === 3 && 'Strong password!'}
                 </p>
@@ -266,7 +266,7 @@ const Register = () => {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder="Re-enter password"
-                className={`w-full pl-10 pr-4 py-2.5 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                className={`w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
                   errors.confirmPassword
                     ? 'border-red-300 focus:border-red-500 focus:ring-red-200 bg-red-50/20'
                     : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -281,7 +281,7 @@ const Register = () => {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full mt-2 py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-md shadow-indigo-200 hover:shadow-indigo-300 transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full mt-2 py-3 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-sm transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {submitting ? (
               <>

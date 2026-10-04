@@ -294,7 +294,7 @@ const MyBookings = () => {
                     />
                     <div className="absolute top-2 left-2">
                       <span
-                        className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase shadow-sm ${
+                        className={`px-2 py-0.5 rounded-md text-[10px] font-bold uppercase shadow-sm ${
                           isConfirmed
                             ? 'bg-emerald-600 text-white'
                             : 'bg-red-600 text-white'
@@ -376,7 +376,7 @@ const MyBookings = () => {
                   <div className="flex items-center space-x-2">
                     <button
                       onClick={() => setSelectedPass(b)}
-                      className="inline-flex items-center space-x-1.5 px-3 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-colors"
+                      className="inline-flex items-center space-x-1.5 px-3 py-2 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-colors"
                       title="View Pass"
                     >
                       <Eye className="w-3.5 h-3.5" />
@@ -386,7 +386,7 @@ const MyBookings = () => {
                     {isConfirmed && !isPast && (
                       <button
                         onClick={() => openCancelModal(b)}
-                        className="px-3 py-2 rounded-xl border border-red-200 hover:bg-red-50 text-red-600 text-xs font-semibold transition-colors"
+                        className="px-3 py-2 rounded-lg border border-red-200 hover:bg-red-50 text-red-600 text-xs font-semibold transition-colors"
                         title="Cancel reservation"
                       >
                         Cancel
@@ -429,7 +429,7 @@ const MyBookings = () => {
                 type="button"
                 onClick={() => setCancelModalOpen(false)}
                 disabled={cancelling}
-                className="py-2.5 px-4 rounded-xl border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-50 transition-colors"
+                className="py-2.5 px-4 rounded-lg border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-50 transition-colors"
               >
                 Keep Booking
               </button>
@@ -437,7 +437,7 @@ const MyBookings = () => {
                 type="button"
                 onClick={confirmCancel}
                 disabled={cancelling}
-                className="py-2.5 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-semibold shadow-sm transition-colors disabled:opacity-50"
+                className="py-2.5 px-4 rounded-lg bg-red-600 hover:bg-red-700 text-white text-xs font-semibold shadow-sm transition-colors disabled:opacity-50"
               >
                 {cancelling ? 'Cancelling...' : 'Confirm Cancel'}
               </button>

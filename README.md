@@ -1,11 +1,11 @@
-# SkillOrbit — Event Booking System
+# SkillOrbit: Event Booking System
 
 > **Web Development Capstone Project**  
 > A full-stack, responsive web application for live event discovery, atomic seat reservation, administrative event management, real-time analytics, and automated reporting.
 
 [![Node.js](https://img.shields.io/badge/Node.js-v18%2B-green.svg)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/React-v19-blue.svg)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-v8-purple.svg)](https://vitejs.dev/)
+[![Vite](https://img.shields.io/badge/Vite-v8-indigo.svg)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v3.4-38bdf8.svg)](https://tailwindcss.com/)
 [![MongoDB Atlas](https://img.shields.io/badge/MongoDB-Atlas-47a248.svg)](https://www.mongodb.com/atlas)
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
@@ -296,36 +296,36 @@ For quick evaluation and grading, the seed script provisions two demo accounts:
 ## 📡 REST API Reference
 
 ### Health
-* `GET /api/health` — System status, uptime, and database connection state
+* `GET /api/health`: System status, uptime, and database connection state
 
 ### Authentication (`/api/auth`)
-* `POST /api/auth/register` — Register a new attendee account
-* `POST /api/auth/login` — Authenticate and receive JWT token
-* `GET /api/auth/me` — Retrieve currently authenticated user profile
+* `POST /api/auth/register`: Register a new attendee account
+* `POST /api/auth/login`: Authenticate and receive JWT token
+* `GET /api/auth/me`: Retrieve currently authenticated user profile
 
 ### Events (`/api/events`)
-* `GET /api/events` — Browse published events (supports `?category=` and `?search=`)
-* `GET /api/events/:id` — Get complete event details by ID
-* `GET /api/events/admin/all` — *(Admin)* Get all events including drafts and cancelled
-* `POST /api/events` — *(Admin)* Create a new scheduled event
-* `PUT /api/events/:id` — *(Admin)* Update event details or adjust capacity
-* `DELETE /api/events/:id` — *(Admin)* Delete or safely archive an event
+* `GET /api/events`: Browse published events (supports `?category=` and `?search=`)
+* `GET /api/events/:id`: Get complete event details by ID
+* `GET /api/events/admin/all`: *(Admin)* Get all events including drafts and cancelled
+* `POST /api/events`: *(Admin)* Create a new scheduled event
+* `PUT /api/events/:id`: *(Admin)* Update event details or adjust capacity
+* `DELETE /api/events/:id`: *(Admin)* Delete or safely archive an event
 
 ### Bookings (`/api/bookings`)
-* `POST /api/bookings` — *(Protected)* Reserve tickets (concurrency-safe atomic decrement)
-* `GET /api/bookings/my` — *(Protected)* Retrieve personal booking history
-* `GET /api/bookings/user/dashboard` — *(Protected)* Retrieve attendee KPI metrics & upcoming passes
-* `GET /api/bookings/:id` — *(Protected)* View booking pass by MongoDB ID or Reference code
-* `PUT /api/bookings/:id/cancel` — *(Protected)* Cancel booking and release seats back to the event
+* `POST /api/bookings`: *(Protected)* Reserve tickets (concurrency-safe atomic decrement)
+* `GET /api/bookings/my`: *(Protected)* Retrieve personal booking history
+* `GET /api/bookings/user/dashboard`: *(Protected)* Retrieve attendee KPI metrics & upcoming passes
+* `GET /api/bookings/:id`: *(Protected)* View booking pass by MongoDB ID or Reference code
+* `PUT /api/bookings/:id/cancel`: *(Protected)* Cancel booking and release seats back to the event
 
 ### Administrative Operations (`/api/admin`)
-* `GET /api/admin/dashboard` — *(Admin)* Live metrics, monthly booking trends, category distribution
-* `GET /api/admin/bookings` — *(Admin)* Retrieve all bookings across the platform
-* `GET /api/admin/users` — *(Admin)* Retrieve registered user accounts
+* `GET /api/admin/dashboard`: *(Admin)* Live metrics, monthly booking trends, category distribution
+* `GET /api/admin/bookings`: *(Admin)* Retrieve all bookings across the platform
+* `GET /api/admin/users`: *(Admin)* Retrieve registered user accounts
 
 ### Reports (`/api/reports`)
-* `GET /api/reports/bookings/csv` — *(Admin)* Export all booking transactions as CSV
-* `GET /api/reports/events/csv` — *(Admin)* Export event occupancy & capacity summary as CSV
+* `GET /api/reports/bookings/csv`: *(Admin)* Export all booking transactions as CSV
+* `GET /api/reports/events/csv`: *(Admin)* Export event occupancy & capacity summary as CSV
 
 ---
 
@@ -351,6 +351,24 @@ For quick evaluation and grading, the seed script provisions two demo accounts:
    * `JWT_SECRET` = `<your-production-secret>`
    * `CLIENT_URL` = `https://your-frontend.vercel.app`
 6. Deploy. Render will provision HTTPS automatically.
+
+### Option 3: Custom Domain Connection
+To launch under your own branded apex domain or subdomain (e.g. `skillorbit.yourdomain.com`):
+1. **Frontend Custom Domain (Vercel):**
+   * In Vercel, navigate to **Settings > Domains**.
+   * Add your custom domain (e.g. `events.yourdomain.com` or `yourdomain.com`).
+   * In your DNS registrar (GoDaddy, Cloudflare, Namecheap, etc.), add the recommended DNS records:
+     * For apex domain: `A` record pointing to `76.76.21.21`
+     * For subdomain: `CNAME` record pointing to `cname.vercel-dns.com`
+   * Vercel provisions an automated SSL/TLS certificate within minutes.
+2. **Backend API Custom Domain (Render):**
+   * In Render, navigate to your backend web service **Settings > Custom Domains**.
+   * Add your API subdomain (e.g. `api.yourdomain.com`).
+   * Add a `CNAME` record in DNS pointing to your Render service address (`<service-name>.onrender.com`).
+3. **Environment Sync:**
+   * Update Render backend `CLIENT_URL` to `https://events.yourdomain.com`.
+   * Update Vercel frontend `VITE_API_URL` to `https://api.yourdomain.com/api`.
+   * Trigger a rebuild to activate full production routing.
 
 ---
 

@@ -1,5 +1,5 @@
 # Requirements Specification & Checklist: Event Booking System
-**Web Development Capstone Project — SkillOrbit**
+**Web Development Capstone Project :  SkillOrbit**
 
 ---
 

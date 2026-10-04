@@ -1,5 +1,5 @@
 # REST API Specification & Endpoint Documentation
-**SkillOrbit Web Development Capstone Project — Event Booking System**
+**SkillOrbit Web Development Capstone Project :  Event Booking System**
 
 ---
 

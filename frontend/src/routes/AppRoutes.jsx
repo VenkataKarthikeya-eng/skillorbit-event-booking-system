@@ -27,14 +27,16 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
+        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<EventDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/terms" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
+        {/* Protected User Routes */}
         <Route
           path="/dashboard"
           element={
@@ -52,6 +54,7 @@ const AppRoutes = () => {
           }
         />
 
+        {/* Protected Admin Routes */}
         <Route
           path="/admin/dashboard"
           element={
@@ -85,6 +88,7 @@ const AppRoutes = () => {
           }
         />
 
+        {/* 404 Route */}
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

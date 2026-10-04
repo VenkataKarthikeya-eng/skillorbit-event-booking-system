@@ -248,14 +248,14 @@ const EventForm = () => {
 
       {/* Success / Error Banners */}
       {successMsg && (
-        <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold flex items-center space-x-2">
+        <div className="p-4 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold flex items-center space-x-2">
           <CheckCircle className="w-4 h-4 text-emerald-500" />
           <span>{successMsg}</span>
         </div>
       )}
 
       {serverError && (
-        <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 text-xs font-semibold flex items-center space-x-2">
+        <div className="p-4 rounded-lg bg-red-50 border border-red-200 text-red-800 text-xs font-semibold flex items-center space-x-2">
           <AlertCircle className="w-4 h-4 text-red-500" />
           <span>{serverError}</span>
         </div>
@@ -275,7 +275,7 @@ const EventForm = () => {
               value={formData.title}
               onChange={handleChange}
               placeholder="e.g. AI & Full-Stack Developers Conference 2026"
-              className={`w-full px-3.5 py-2.5 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
+              className={`w-full px-3.5 py-2.5 rounded-lg border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
                 errors.title
                   ? 'border-red-300 focus:ring-red-100 bg-red-50/20'
                   : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -292,7 +292,7 @@ const EventForm = () => {
               name="category"
               value={formData.category}
               onChange={handleChange}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 bg-white"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 bg-white"
             >
               {CATEGORIES.map((cat) => (
                 <option key={cat} value={cat}>
@@ -314,7 +314,7 @@ const EventForm = () => {
             value={formData.description}
             onChange={handleChange}
             placeholder="Provide a comprehensive summary of keynotes, topics, prerequisites, and schedules..."
-            className={`w-full px-3.5 py-2.5 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
+            className={`w-full px-3.5 py-2.5 rounded-lg border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
               errors.description
                 ? 'border-red-300 focus:ring-red-100 bg-red-50/20'
                 : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -334,7 +334,7 @@ const EventForm = () => {
               name="date"
               value={formData.date}
               onChange={handleChange}
-              className={`w-full px-3.5 py-2.5 rounded-xl border text-sm text-slate-900 focus:outline-none focus:ring-2 transition-all ${
+              className={`w-full px-3.5 py-2.5 rounded-lg border text-sm text-slate-900 focus:outline-none focus:ring-2 transition-all ${
                 errors.date
                   ? 'border-red-300 focus:ring-red-100 bg-red-50/20'
                   : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -353,7 +353,7 @@ const EventForm = () => {
               value={formData.time}
               onChange={handleChange}
               placeholder="10:00 AM - 04:00 PM"
-              className={`w-full px-3.5 py-2.5 rounded-xl border text-sm text-slate-900 focus:outline-none focus:ring-2 transition-all ${
+              className={`w-full px-3.5 py-2.5 rounded-lg border text-sm text-slate-900 focus:outline-none focus:ring-2 transition-all ${
                 errors.time
                   ? 'border-red-300 focus:ring-red-100 bg-red-50/20'
                   : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -372,7 +372,7 @@ const EventForm = () => {
               value={formData.venue}
               onChange={handleChange}
               placeholder="Auditorium Hall B or Zoom Webinar"
-              className={`w-full px-3.5 py-2.5 rounded-xl border text-sm text-slate-900 focus:outline-none focus:ring-2 transition-all ${
+              className={`w-full px-3.5 py-2.5 rounded-lg border text-sm text-slate-900 focus:outline-none focus:ring-2 transition-all ${
                 errors.venue
                   ? 'border-red-300 focus:ring-red-100 bg-red-50/20'
                   : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -391,7 +391,7 @@ const EventForm = () => {
               value={formData.location}
               onChange={handleChange}
               placeholder="Bengaluru, Karnataka (or Online)"
-              className={`w-full px-3.5 py-2.5 rounded-xl border text-sm text-slate-900 focus:outline-none focus:ring-2 transition-all ${
+              className={`w-full px-3.5 py-2.5 rounded-lg border text-sm text-slate-900 focus:outline-none focus:ring-2 transition-all ${
                 errors.location
                   ? 'border-red-300 focus:ring-red-100 bg-red-50/20'
                   : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -413,7 +413,7 @@ const EventForm = () => {
               min="1"
               value={formData.capacity}
               onChange={handleChange}
-              className={`w-full px-3.5 py-2.5 rounded-xl border text-sm text-slate-900 focus:outline-none focus:ring-2 transition-all ${
+              className={`w-full px-3.5 py-2.5 rounded-lg border text-sm text-slate-900 focus:outline-none focus:ring-2 transition-all ${
                 errors.capacity
                   ? 'border-red-300 focus:ring-red-100 bg-red-50/20'
                   : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -438,7 +438,7 @@ const EventForm = () => {
               value={formData.ticketPrice}
               onChange={handleChange}
               placeholder="0 for free admission"
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
             />
             <p className="mt-1 text-[11px] text-slate-400">Set 0 for complimentary entry</p>
           </div>
@@ -451,7 +451,7 @@ const EventForm = () => {
               name="status"
               value={formData.status}
               onChange={handleChange}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 bg-white"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 bg-white"
             >
               <option value="published">Published</option>
               <option value="draft">Draft (Hidden)</option>
@@ -475,12 +475,12 @@ const EventForm = () => {
                 value={formData.bannerUrl}
                 onChange={handleChange}
                 placeholder="Paste image URL (e.g. https://images.unsplash.com/...)"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 mb-2"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 mb-2"
               />
 
               {/* Or upload local file */}
               <div className="flex items-center space-x-2">
-                <label className="cursor-pointer inline-flex items-center space-x-2 px-3.5 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-xs font-semibold text-slate-700 transition-colors">
+                <label className="cursor-pointer inline-flex items-center space-x-2 px-3.5 py-2 rounded-lg border border-slate-300 hover:bg-slate-50 text-xs font-semibold text-slate-700 transition-colors">
                   <Upload className="w-3.5 h-3.5 text-indigo-600" />
                   <span>{uploading ? 'Uploading...' : 'Upload Image File'}</span>
                   <input
@@ -497,7 +497,7 @@ const EventForm = () => {
             </div>
 
             {/* Banner Preview */}
-            <div className="aspect-video w-full rounded-xl bg-slate-100 border border-slate-200 overflow-hidden relative flex items-center justify-center">
+            <div className="aspect-video w-full rounded-lg bg-slate-100 border border-slate-200 overflow-hidden relative flex items-center justify-center">
               {formData.bannerUrl ? (
                 <img
                   src={formData.bannerUrl}
@@ -521,14 +521,14 @@ const EventForm = () => {
         <div className="pt-4 border-t border-slate-100 flex items-center justify-end space-x-3">
           <Link
             to="/admin/events"
-            className="px-5 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-colors"
+            className="px-5 py-2.5 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-colors"
           >
             Cancel
           </Link>
           <button
             type="submit"
             disabled={submitting || uploading}
-            className="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm transition-all disabled:opacity-50"
+            className="inline-flex items-center space-x-2 px-6 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm transition-all disabled:opacity-50"
           >
             <Save className="w-3.5 h-3.5" />
             <span>{submitting ? 'Saving Event...' : isEdit ? 'Update Event' : 'Create Event'}</span>

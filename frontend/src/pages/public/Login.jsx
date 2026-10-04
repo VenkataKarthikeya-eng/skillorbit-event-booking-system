@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Mail, Lock, Eye, EyeOff, LogIn, AlertCircle, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, LogIn, AlertCircle, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import useAuth from '../../hooks/useAuth';
 import useToast from '../../hooks/useToast';
 
@@ -107,7 +107,7 @@ const Login = () => {
                   if (errors.email) setErrors((prev) => ({ ...prev, email: '' }));
                 }}
                 placeholder="name@example.com"
-                className={`w-full pl-10 pr-4 py-2.5 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                className={`w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
                   errors.email
                     ? 'border-red-300 focus:border-red-500 focus:ring-red-200 bg-red-50/20'
                     : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -133,7 +133,7 @@ const Login = () => {
                   if (errors.password) setErrors((prev) => ({ ...prev, password: '' }));
                 }}
                 placeholder="••••••••"
-                className={`w-full pl-10 pr-10 py-2.5 rounded-xl border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                className={`w-full pl-10 pr-10 py-2.5 rounded-lg border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 transition-all ${
                   errors.password
                     ? 'border-red-300 focus:border-red-500 focus:ring-red-200 bg-red-50/20'
                     : 'border-slate-300 focus:border-indigo-600 focus:ring-indigo-100'
@@ -153,7 +153,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-md shadow-indigo-200 hover:shadow-indigo-300 transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full py-3 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-sm transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {submitting ? (
               <>
@@ -171,23 +171,23 @@ const Login = () => {
         {/* Quick Fill Credentials for Grading / Evaluation */}
         <div className="mt-6 pt-6 border-t border-slate-100">
           <div className="flex items-center space-x-1.5 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
-            <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-            <span>Capstone Quick Demo Access</span>
+            <ShieldCheck className="w-3.5 h-3.5 text-slate-600" />
+            <span>Evaluation Demo Credentials</span>
           </div>
           <div className="grid grid-cols-2 gap-2 text-xs">
             <button
               type="button"
               onClick={() => handleQuickFill('admin@skillorbit.com', 'AdminPassword123!')}
-              className="py-2 px-2.5 rounded-lg border border-purple-200 bg-purple-50 hover:bg-purple-100 text-purple-700 font-medium transition-colors text-center"
+              className="py-2 px-2.5 rounded-lg border border-slate-300 bg-slate-50 hover:bg-slate-100 text-slate-800 font-medium transition-colors text-center"
             >
-              Fill Admin Demo
+              Admin Account
             </button>
             <button
               type="button"
               onClick={() => handleQuickFill('student@skillorbit.com', 'StudentPassword123!')}
-              className="py-2 px-2.5 rounded-lg border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium transition-colors text-center"
+              className="py-2 px-2.5 rounded-lg border border-slate-300 bg-slate-50 hover:bg-slate-100 text-slate-800 font-medium transition-colors text-center"
             >
-              Fill Student Demo
+              Student Account
             </button>
           </div>
         </div>

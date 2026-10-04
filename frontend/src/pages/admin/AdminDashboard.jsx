@@ -35,7 +35,7 @@ import useToast from '../../hooks/useToast';
 
 const COLORS = [
   '#4f46e5', // Indigo
-  '#9333ea', // Purple
+  '#2563eb', // Blue
   '#059669', // Emerald
   '#d97706', // Amber
   '#e11d48', // Rose
@@ -131,7 +131,7 @@ const AdminDashboard = () => {
         <p className="text-xs text-red-600">{error}</p>
         <button
           onClick={fetchStats}
-          className="inline-flex items-center space-x-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-sm"
+          className="inline-flex items-center space-x-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-semibold shadow-sm"
         >
           <RefreshCw className="w-3.5 h-3.5" />
           <span>Retry Loading</span>
@@ -147,8 +147,8 @@ const AdminDashboard = () => {
       {/* Top Header */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-200">
         <div>
-          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold uppercase tracking-wider mb-2 border border-purple-200">
-            <Shield className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold uppercase tracking-wider mb-2 border border-slate-200">
+            <Shield className="w-3.5 h-3.5 text-indigo-600" />
             <span>Administrator Control Center</span>
           </div>
           <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -164,7 +164,7 @@ const AdminDashboard = () => {
           <button
             onClick={handleDownloadBookings}
             disabled={downloadingBookings}
-            className="inline-flex items-center space-x-2 px-3.5 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs transition-colors shadow-sm disabled:opacity-50"
+            className="inline-flex items-center space-x-2 px-3.5 py-2.5 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs transition-colors shadow-sm disabled:opacity-50"
             title="Export all bookings as CSV"
           >
             <Download className="w-4 h-4 text-indigo-600" />
@@ -174,7 +174,7 @@ const AdminDashboard = () => {
           <button
             onClick={handleDownloadEvents}
             disabled={downloadingEvents}
-            className="inline-flex items-center space-x-2 px-3.5 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs transition-colors shadow-sm disabled:opacity-50"
+            className="inline-flex items-center space-x-2 px-3.5 py-2.5 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs transition-colors shadow-sm disabled:opacity-50"
             title="Export event occupancy as CSV"
           >
             <Download className="w-4 h-4 text-emerald-600" />
@@ -183,7 +183,7 @@ const AdminDashboard = () => {
 
           <Link
             to="/admin/events/new"
-            className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs shadow-sm transition-all"
+            className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs shadow-sm transition-all"
           >
             <Plus className="w-4 h-4" />
             <span>Create Event</span>
@@ -194,7 +194,7 @@ const AdminDashboard = () => {
       {/* Feedback Alert */}
       {feedback && (
         <div
-          className={`p-4 rounded-xl flex items-center space-x-3 text-xs font-semibold ${
+          className={`p-4 rounded-lg flex items-center space-x-3 text-xs font-semibold ${
             feedback.type === 'success'
               ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
               : 'bg-red-50 text-red-800 border border-red-200'
@@ -234,9 +234,9 @@ const AdminDashboard = () => {
         <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
           <div className="flex items-center justify-between text-xs text-slate-500 font-semibold mb-2">
             <span>Tickets Reserved</span>
-            <TrendingUp className="w-4 h-4 text-purple-600" />
+            <TrendingUp className="w-4 h-4 text-indigo-600" />
           </div>
-          <div className="text-2xl font-black text-purple-600">
+          <div className="text-2xl font-black text-slate-900">
             {summary.totalTicketsBooked}
           </div>
           <div className="text-[11px] text-slate-400 mt-1">Total seats booked</div>
@@ -320,7 +320,7 @@ const AdminDashboard = () => {
         <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="font-bold text-base text-slate-900 flex items-center space-x-2">
-              <PieIcon className="w-4 h-4 text-purple-600" />
+              <PieIcon className="w-4 h-4 text-indigo-600" />
               <span>Category Distribution</span>
             </h3>
             <span className="text-[11px] text-slate-400">All Scheduled Events</span>
@@ -429,7 +429,7 @@ const AdminDashboard = () => {
                     </td>
                     <td className="py-3 px-3 text-right">
                       <span
-                        className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase ${
+                        className={`inline-block px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase ${
                           b.status === 'confirmed'
                             ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
                             : 'bg-red-50 text-red-700 border border-red-200'
