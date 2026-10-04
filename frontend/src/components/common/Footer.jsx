@@ -18,7 +18,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              Enterprise-grade event ticketing, real-time seating inventory management, and administrative reporting powered by atomic database operations.
+              Event ticketing platform with real-time seat tracking, instant digital admission passes, and administrative reporting.
             </p>
             <div className="flex items-center space-x-4 text-xs text-slate-400 pt-1">
               <span className="flex items-center space-x-1.5">
@@ -87,7 +87,9 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} SkillOrbit Event Booking System. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} SkillOrbit Event Booking System. Designed &amp; Developed by <span className="text-slate-300 font-medium">Cherukuri Venkata Karthikeya</span>.
+          </p>
           <div className="flex items-center space-x-4">
             <Link to="/privacy-policy" className="hover:text-slate-400 transition-colors">
               Privacy Policy

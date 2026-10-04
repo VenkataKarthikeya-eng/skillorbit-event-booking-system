@@ -11,6 +11,11 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
 [![Test Suite](https://img.shields.io/badge/E2E%20Tests-77%2F77%20Passed-brightgreen.svg)]()
 
+### 🌐 Live Deployment & Project Links
+* **Live Website:** [https://skillorbit-event-booking-system.vercel.app/](https://skillorbit-event-booking-system.vercel.app/)
+* **GitHub Repository:** [https://github.com/VenkataKarthikeya-eng/skillorbit-event-booking-system](https://github.com/VenkataKarthikeya-eng/skillorbit-event-booking-system)
+* **Lead Developer & Designer:** Cherukuri Venkata Karthikeya
+
 ---
 
 ## 📋 Table of Contents
@@ -386,6 +391,14 @@ To launch under your own branded apex domain or subdomain (e.g. `skillorbit.your
 2. **Credential Sanitization:** User passwords use selective exclusion (`select: false`) on queries and are never logged or returned in responses.
 3. **Data Integrity:** Historical booking references cannot be modified. Cancellation triggers atomic capacity restoration.
 4. **Zero Exposed Secrets:** `.env` is omitted from all git stages and verified by automated pre-commit audits.
+
+---
+
+## 👨‍💻 Author & Lead Developer
+
+* **Developer & UI/UX Designer:** Cherukuri Venkata Karthikeya
+* **Live Deployment:** [https://skillorbit-event-booking-system.vercel.app/](https://skillorbit-event-booking-system.vercel.app/)
+* **GitHub Repository:** [https://github.com/VenkataKarthikeya-eng/skillorbit-event-booking-system](https://github.com/VenkataKarthikeya-eng/skillorbit-event-booking-system)
 
 ---
 
