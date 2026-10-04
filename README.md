@@ -13,6 +13,8 @@
 
 ### 🌐 Live Deployment & Project Links
 * **Live Website:** [https://skillorbit-event-booking-system.vercel.app/](https://skillorbit-event-booking-system.vercel.app/)
+* **Backend API:** [https://skillorbit-backend.onrender.com](https://skillorbit-backend.onrender.com)
+* **API Health Check:** [https://skillorbit-backend.onrender.com/api/health](https://skillorbit-backend.onrender.com/api/health)
 * **GitHub Repository:** [https://github.com/VenkataKarthikeya-eng/skillorbit-event-booking-system](https://github.com/VenkataKarthikeya-eng/skillorbit-event-booking-system)
 * **Lead Developer & Designer:** Cherukuri Venkata Karthikeya
 
@@ -22,6 +24,7 @@
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)
+- [Capstone Submission Deliverables](#-capstone-submission-deliverables)
 - [Architecture & Tech Stack](#-architecture--tech-stack)
 - [Directory Structure](#-directory-structure)
 - [Prerequisites](#-prerequisites)
@@ -34,6 +37,7 @@
 - [REST API Reference](#-rest-api-reference)
 - [Production Deployment Guide](#-production-deployment-guide)
 - [Security & Concurrency Guarantees](#-security--concurrency-guarantees)
+- [Author & Lead Developer](#-author--lead-developer)
 
 ---
 
@@ -79,6 +83,25 @@ The **SkillOrbit Event Booking System** is an enterprise-grade academic capstone
 
 ---
 
+## 📑 Capstone Submission Deliverables
+
+The repository includes complete academic submission documentation, schemas, slides, and reports:
+
+| Deliverable | Format | File Location | Description |
+| :--- | :--- | :--- | :--- |
+| **Project Report (PDF)** | PDF | [`Project Report.pdf`](Project%20Report.pdf) | Complete 30-section academic capstone report (9 pages) |
+| **Project Report (Markdown)** | Markdown | [`docs/Project_Report.md`](docs/Project_Report.md) | Full text project report containing all 30 numbered sections |
+| **Database Schema (PDF)** | PDF | [`Database Schema.pdf`](Database%20Schema.pdf) | Formal database schema specification & indexing report |
+| **Database Schema (Markdown)** | Markdown | [`docs/Database_Schema.md`](docs/Database_Schema.md) | Data dictionary, Mongoose schema models, integrity rules |
+| **Database ERD Diagram** | Image (PNG) | [`docs/database-schema.png`](docs/database-schema.png) | High-resolution 300 DPI Entity Relationship Diagram |
+| **REST API Documentation** | Markdown | [`docs/API_Documentation.md`](docs/API_Documentation.md) | Complete specifications for all 18 authentic endpoints |
+| **Presentation Deck (PPTX)** | PowerPoint | [`SkillOrbit_Event_Booking_System_Presentation.pptx`](SkillOrbit_Event_Booking_System_Presentation.pptx) | Final executive slide deck matching presentation template |
+| **Presentation Deck (PDF)** | PDF | [`SkillOrbit_Event_Booking_System_Presentation.pdf`](SkillOrbit_Event_Booking_System_Presentation.pdf) | Slide deck exported to vector PDF |
+| **Architecture Specification** | Markdown | [`ARCHITECTURE.md`](ARCHITECTURE.md) | High-level architectural design and data flow breakdown |
+| **Requirements Specification** | Markdown | [`REQUIREMENTS.md`](REQUIREMENTS.md) | Functional and non-functional requirements checklist |
+
+---
+
 ## 🛠 Architecture & Tech Stack
 
 ```
@@ -113,41 +136,48 @@ The **SkillOrbit Event Booking System** is an enterprise-grade academic capstone
 
 ```text
 SkillOrbit_Project/
-├── backend/
+├── README.md                                          # Master project overview & documentation
+├── ARCHITECTURE.md                                    # Architectural design specification
+├── REQUIREMENTS.md                                    # Engineering requirements specification
+├── Project Report.pdf                                 # Compiled academic project report (30 sections)
+├── Database Schema.pdf                                # Compiled database schema report & ERD
+├── SkillOrbit_Event_Booking_System_Presentation.pptx  # Submission presentation slide deck
+├── SkillOrbit_Event_Booking_System_Presentation.pdf   # Slide deck exported as vector PDF
+├── backend/                                           # Express.js REST API service
 │   ├── src/
-│   │   ├── config/          # MongoDB Atlas connection & fallback DNS
-│   │   ├── controllers/     # Controller logic (auth, event, booking, admin, report)
-│   │   ├── middleware/      # Auth, role authorization, db checks, error handling
-│   │   ├── models/          # Mongoose Schemas (User, Event, Booking)
-│   │   ├── routes/          # Express REST endpoints
-│   │   ├── utils/           # Reference generator, JWT helper, seed script
-│   │   ├── app.js           # Express app setup, CORS, and route mounting
-│   │   └── server.js        # HTTP server listener
-│   ├── tests/
-│   │   └── e2e.test.js      # 77-case automated end-to-end test suite
-│   ├── uploads/             # Uploaded event banner storage
-│   ├── .env.example         # Template for environment variables
-│   └── package.json         # Backend scripts and dependencies
-├── frontend/
-│   ├── public/              # Static assets & _redirects (Netlify/Render)
+│   │   ├── config/                                    # MongoDB Atlas connection & configuration
+│   │   ├── controllers/                               # Route business logic handlers
+│   │   ├── middleware/                                # Auth, role authorization, db watchdog & error handling
+│   │   ├── models/                                    # Mongoose Schemas (User, Event, Booking)
+│   │   ├── routes/                                    # Express REST endpoint routing
+│   │   ├── utils/                                     # Reference generator, JWT helper, seed script
+│   │   ├── app.js                                     # Express app setup, CORS, and route mounting
+│   │   └── server.js                                  # HTTP server entrypoint
+│   ├── tests/                                         # Automated Jest & Supertest suites (77 tests)
+│   ├── uploads/                                       # Uploaded event banner storage
+│   ├── .env.example                                   # Environment variable template
+│   └── package.json                                   # Backend dependencies & scripts
+├── frontend/                                          # React 19 Single Page Application
+│   ├── public/                                        # Static assets, custom favicon
 │   ├── src/
-│   │   ├── components/      # Common, booking modals, event cards & filters
-│   │   ├── context/         # AuthContext & ToastContext providers
-│   │   ├── hooks/           # Custom React hooks (useAuth, useToast)
-│   │   ├── layouts/         # Main responsive application layout
-│   │   ├── pages/           # Public, user, and admin views
-│   │   ├── routes/          # AppRoutes, ProtectedRoute, AdminRoute
-│   │   ├── services/        # Centralized Axios API clients
-│   │   ├── App.jsx          # Root component wrapped with providers
-│   │   └── main.jsx         # Vite entry point
-│   ├── vercel.json          # Vercel SPA routing configuration
-│   ├── .env.example         # Frontend API base URL template
-│   └── package.json         # Frontend scripts and dependencies
-├── docs/                    # Database schemas and API documentation
-├── ARCHITECTURE.md          # Comprehensive architectural specification
-├── REQUIREMENTS.md          # Capstone requirements specification
-├── .gitignore               # Multi-layer git exclusion rules
-└── README.md                # Project documentation
+│   │   ├── components/                                # Common, booking modals, event cards & filters
+│   │   ├── context/                                   # AuthContext & ToastContext providers
+│   │   ├── hooks/                                     # Custom React hooks (useAuth, useToast)
+│   │   ├── layouts/                                   # Main responsive application layout
+│   │   ├── pages/                                     # Public, user, and admin views
+│   │   ├── routes/                                    # AppRoutes, ProtectedRoute, AdminRoute
+│   │   ├── services/                                  # Centralized Axios API clients
+│   │   ├── App.jsx                                    # Root component with providers
+│   │   └── main.jsx                                   # Vite entry point
+│   ├── vercel.json                                    # Vercel SPA routing configuration
+│   ├── .env.example                                   # Frontend API base URL template
+│   └── package.json                                   # Frontend dependencies & scripts
+├── docs/                                              # Comprehensive project documentation
+│   ├── Project_Report.md                              # Full markdown project report (30 sections)
+│   ├── Database_Schema.md                             # Database schema & indexing specification
+│   ├── API_Documentation.md                           # REST API reference covering all 18 endpoints
+│   └── database-schema.png                            # High-resolution ERD diagram (300 DPI)
+└── .gitignore                                         # Multi-layer git exclusion rules
 ```
 
 ---
@@ -331,6 +361,11 @@ For quick evaluation and grading, the seed script provisions two demo accounts:
 ### Reports (`/api/reports`)
 * `GET /api/reports/bookings/csv`: *(Admin)* Export all booking transactions as CSV
 * `GET /api/reports/events/csv`: *(Admin)* Export event occupancy & capacity summary as CSV
+
+### Media Upload (`/api/upload`)
+* `POST /api/upload`: *(Admin)* Upload event banner image (`multipart/form-data`)
+
+> **Comprehensive API Reference:** For complete request bodies, query parameters, authorization headers, and JSON error response schemas for all 18 authentic endpoints, see [`docs/API_Documentation.md`](docs/API_Documentation.md).
 
 ---
 
