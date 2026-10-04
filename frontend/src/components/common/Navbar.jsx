@@ -29,10 +29,17 @@ const Navbar = () => {
   };
 
   const navLinkClass = ({ isActive }) =>
-    `px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+    `px-3 py-1.5 rounded-lg text-sm font-medium transition-all outline-none focus:outline-none focus:ring-0 ${
       isActive
-        ? 'bg-indigo-50 text-indigo-700'
-        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+        ? 'bg-slate-100 text-slate-900 border border-slate-300 shadow-xs'
+        : 'border border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+    }`;
+
+  const mobileNavLinkClass = ({ isActive }) =>
+    `block px-3 py-2 rounded-lg text-base font-medium transition-colors outline-none focus:outline-none focus:ring-0 ${
+      isActive
+        ? 'bg-slate-100 text-slate-900 border border-slate-300 font-semibold'
+        : 'border border-transparent text-slate-700 hover:bg-slate-50'
     }`;
 
   return (
@@ -42,13 +49,13 @@ const Navbar = () => {
           {/* Brand Logo */}
           <Link
             to="/"
-            className="flex items-center space-x-2 text-indigo-600 font-bold text-xl tracking-tight"
+            className="flex items-center space-x-2 text-blue-700 font-bold text-xl tracking-tight outline-none focus:outline-none"
           >
-            <div className="p-2 bg-indigo-600 text-white rounded-lg shadow-sm">
+            <div className="p-2 bg-blue-700 text-white rounded-lg shadow-sm">
               <Calendar className="w-5 h-5" />
             </div>
             <span className="text-slate-900 font-bold text-xl tracking-tight">
-              SkillOrbit <span className="text-indigo-600 font-medium">Events</span>
+              SkillOrbit <span className="text-blue-700 font-medium">Events</span>
             </span>
           </Link>
 
@@ -166,14 +173,14 @@ const Navbar = () => {
           <NavLink
             to="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100"
+            className={mobileNavLinkClass}
           >
             Home
           </NavLink>
           <NavLink
             to="/events"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100"
+            className={mobileNavLinkClass}
           >
             Browse Events
           </NavLink>
@@ -183,14 +190,14 @@ const Navbar = () => {
               <NavLink
                 to="/dashboard"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100"
+                className={mobileNavLinkClass}
               >
                 Dashboard
               </NavLink>
               <NavLink
                 to="/my-bookings"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100"
+                className={mobileNavLinkClass}
               >
                 My Bookings
               </NavLink>
